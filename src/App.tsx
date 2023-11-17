@@ -16,12 +16,12 @@ function App() {
       setFilteredListValues(data)
   })
   }, [])
-  
+
   return (
     <section className="mx-auto max-w-sm pt-16">
       <h1 className='font-extrabold text-pink-500 mb-10'>Yet another TODO List Web App!</h1>
-     <SearchBox listValues={listValues} setFilteredListValues={setFilteredListValues} />
-      <VerticalList listValues={filteredListValues} />
+      <SearchBox listValues={listValues} setFilteredListValues={setFilteredListValues} />
+      <VerticalList filteredListValues={filteredListValues}  />
     </section>
   )
 }

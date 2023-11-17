@@ -1,16 +1,17 @@
 import { Item, ListItem } from "./ListItem"
 
 interface VerticalListProps {
-    listValues: Item[]
+    filteredListValues: Item[]
 }
 
-export const VerticalList: React.FC<VerticalListProps> = ({ listValues }) => {
+export const VerticalList: React.FC<VerticalListProps> = ({ filteredListValues }) => {
 
   return (
     <div>
         <ul>
-            {listValues.map((item) => (
-                <ListItem key={item.id} item={item}  />
+            {filteredListValues.map((item) => (
+                <ListItem key={item.id} 
+                item={item}  />
 
             ))}
            
